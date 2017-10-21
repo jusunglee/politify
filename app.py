@@ -4,6 +4,9 @@ from flask import request
 from flask import jsonify
 from play import get_d, is_congress
 
+app = Flask(__name__)
+
+
 
 @app.route('/')
 def dashboard():
