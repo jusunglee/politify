@@ -2,9 +2,11 @@ from flask import Flask
 from flask import render_template
 from flask import request
 from flask import jsonify
+from flask import CORS
 from play import get_d, is_congress
 
 app = Flask(__name__)
+CORS(app)
 
 
 
