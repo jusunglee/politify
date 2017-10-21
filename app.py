@@ -13,14 +13,15 @@ def dashboard():
     return render_template('dashboard.html')
 
 @app.route('/getlist', methods=['POST'])
-def get_list(names):
-    data = request.form
+def get_list():
+    data = dict(request.form)['list[]']
     print(data)
     data = set(data)
     list = []
     for d in data:
-        if is_congress(d):
+        if is_congress(d.lower()):
             list.append(d)
+    print(list)
     return jsonify({'results': list})
 
 
