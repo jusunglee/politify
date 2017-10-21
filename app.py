@@ -2,9 +2,6 @@ from flask import Flask
 from flask import render_template
 from flask import request
 from flask import jsonify
-import urllib.request
-import tweepy
-from bs4 import BeautifulSoup as BS
 from play import get_d, is_congress
 
 consumer_secret = 'JhrlYNlZKu8oOpaZP16xh8tmaxyPOJqz6ZFGa5QM3TUD2dVWtI'
@@ -22,8 +19,8 @@ app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 def dashboard():
     return render_template('dashboard.html')
 
-@app.route('/get', methods=['POST'])
-def process_congress(names):
+@app.route('/getlist', methods=['POST'])
+def get_list(names):
     data = request.form
     print(data)
     data = set(data)
