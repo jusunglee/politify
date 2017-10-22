@@ -30,7 +30,7 @@ def get_list():
 
 @app.route('/congress/<name>', methods=['GET'])
 def process_congress(name):
-    results = get_d(name)
+    results = get_d(name.lower())
     return jsonify(results)
 
 
