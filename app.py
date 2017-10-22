@@ -16,6 +16,7 @@ def dashboard():
 
 @app.route('/getlist', methods=['POST'])
 def get_list():
+    print('yup', dict(request.form))
     data = dict(request.form)['list[]']
     print(data)
     data = set(data)
