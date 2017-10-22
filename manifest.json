@@ -10,8 +10,8 @@
     "content_scripts": [
         {
           "matches": ["<all_urls>"],
-          "js": ["jquery-3.2.1.min.js", "test.js"], 
-          "css": ["test.css"]
+          "js": ["jquery-3.2.1.min.js", "nhpup_1.1.js", "main.js", "test.js"], 
+          "css": ["style.css"]
         
         }],
         
